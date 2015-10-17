@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Devises</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Address</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @devises.each do |devise| %>
+      <tr>
+        <td><%= devise.room_id %></td>
+        <td><%= devise.address %></td>
+        <td><%= link_to 'Show', devise %></td>
+        <td><%= link_to 'Edit', edit_devise_path(devise) %></td>
+        <td><%= link_to 'Destroy', devise, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Devise', new_devise_path %>

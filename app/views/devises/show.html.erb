@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Room:</strong>
+  <%= @devise.room_id %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @devise.address %>
+</p>
+
+<%= link_to 'Edit', edit_devise_path(@devise) %> |
+<%= link_to 'Back', devises_path %>
